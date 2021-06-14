@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FragmentOne">
+    <fragment
+        android:id="@+id/FragmentOne"
+        android:label="f_fragment"
+        android:name="com.example.BerkOdev.FragmentList"
+        tools:layout="@layout/fragment_liste">
+        <action
+            app:destination="@id/FragmentTwo"
+            android:id="@+id/action_FFragment_to_SFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/FragmentTwo"
+        android:label="s_fragment_l"
+        android:name="com.example.BerkOdev.DetaylıFragment"
+        tools:layout="@layout/fragment_dty">
+        <action
+            app:destination="@id/FragmentTwo"
+            android:id="@+id/action_SFragment_to_FFragment" />
+    </fragment>
+</navigation>
